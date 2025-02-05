@@ -85,6 +85,16 @@
             box-shadow: 0 0 15px var(--primary);
         }
 
+        .btn-chart {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
         .contract-address {
             cursor: pointer;
             font-weight: bold;
@@ -120,7 +130,7 @@
 
             <div class="d-flex gap-3 justify-content-center mb-5" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://raydium.io/swap/" target="_blank" class="btn btn-thrust">BUY NOW</a>
-                <a href="#chart" class="btn btn-outline-dark">CHART</a>
+                <a href="#chart" class="btn btn-outline-dark btn-chart"><i class="fa fa-chart-line me-2"></i>CHART</a>
             </div>
         </div>
     </section>
