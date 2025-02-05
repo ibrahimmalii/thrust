@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRUST - The People's Rocket 🚀</title>
+    
+    <!-- CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+    <style>
+        /* New Color Scheme */
+        :root {
+            --primary: #007BFF;  /* Bright Blue */
+            --secondary: #00BFFF; /* Sky Blue */
+            --accent: #FFD700;  /* Gold */
+            --background: #F8F9FA; /* Light Gray */
+            --text-dark: #222;
+        }
+        
+        body {
+            background: var(--background);
+            color: var(--text-dark);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .hero {
+            background: radial-gradient(circle at center, #E3F2FD 0%, var(--background) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .thrust-logo {
+            width: 180px;
+            filter: drop-shadow(0 0 15px var(--primary));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-thrust {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-thrust:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .contract-address {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .contract-address:hover {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/cuda/images/Thrust_newlogo3.JPG" 
+                 alt="THRUST" 
+                 class="thrust-logo mb-4"
+                 data-aos="zoom-in">
+
+            <h1 class="fw-bold mb-3 gradient-text" data-aos="fade-up">
+                🚀 THRUST <span class="badge bg-success animate__animated animate__pulse animate__infinite">Live!</span>
+            </h1>
+
+            <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-muted">Contract:</span>
+                <code class="contract-address d-block mt-2" 
+                      onclick="navigator.clipboard.writeText('8mQkYRQ755K621hpS5RE9gWKwidShL3zVhtYiS14KTen')">
+                    8mQk...KTen
+                </code>
+            </div>
+
+            <div class="d-flex gap-3 justify-content-center mb-5" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://raydium.io/swap/" target="_blank" class="btn btn-thrust">BUY NOW</a>
+                <a href="#chart" class="btn btn-outline-dark">CHART</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="gradient-text mb-5" data-aos="fade-up">🔥 THE THRUST MEME 🔥</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust2-enhance.jpg" alt="Thrust Meme 1" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust1-enhance.jpg" alt="Thrust Meme 2" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust3-enhance.jpg" alt="Thrust Meme 3" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+            <p class="mt-4 lead" data-aos="fade-up">🚀 The most powerful thrust known to crypto! 🚀</p>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5 gradient-text" data-aos="fade-up">TOKENOMICS</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <h3>1B Supply</h3>
+                        <p class="text-muted">Fixed Total Supply</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <h3>0% Tax</h3>
+                        <p class="text-muted">No Hidden Fees</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <h3>LP Locked</h3>
+                        <p class="text-muted">Rug Proof</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5" data-aos="fade-up">HOW TO BUY</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <h3>1️⃣ Get SOL</h3>
+                        <p>Buy SOL from any major exchange</p>
+                        <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana" style="width: 80px;">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <h3>2️⃣ Swap on DEX</h3>
+                        <p>Swap SOL for THRUST on Raydium</p>
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/8526.png"
+                                 alt="Raydium"
+                                 style="width: 80px;">
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="feature-card">
+                        <h3>3️⃣ HODL 🚀</h3>
+                        <p>Hold tight and enjoy the ride to the moon!</p>
+                        <i class="fas fa-rocket fa-5x text-primary"></i> <!-- FontAwesome Icon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community CTA -->
+    <section class="py-5">
+        <div class="container text-center" data-aos="zoom-in">
+            <h2 class="gradient-text mb-4">JOIN THE LAUNCH</h2>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="https://t.me/yourchannel" target="_blank" class="btn btn-thrust"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://twitter.com/yourhandle" target="_blank" class="btn btn-thrust"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>AOS.init();</script>
+</body>
+</html>
