@@ -45,7 +45,10 @@
         }
 
         .thrust-logo {
-            width: 180px;
+            max-width: 500px;
+            max-height: 450px;
+            width: 100%;
+            height: auto;
             filter: drop-shadow(0 0 15px var(--primary));
             animation: pulse 2s ease-in-out infinite;
         }
@@ -121,43 +124,85 @@
         }
 
         /* Base funny GIF styles */
-    .funny-gif {
-        transition: transform 0.3s ease-in-out;
-    }
+        .funny-gif {
+            transition: transform 0.3s ease-in-out;
+        }
 
-    /* Bouncing effect */
-    @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    .bounce-thrust {
-        animation: bounce 0.8s infinite alternate ease-in-out;
-    }
+        /* Bouncing effect */
+        @keyframes bounce {
 
-    /* Spinning effect */
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    .spin-thrust {
-        animation: spin 5s linear infinite;
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-    /* Wiggling effect */
-    @keyframes wiggle {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(-5deg); }
-        50% { transform: rotate(5deg); }
-        75% { transform: rotate(-5deg); }
-    }
-    .wiggle-thrust {
-        animation: wiggle 1s infinite ease-in-out;
-    }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-    /* Funny hover effect (jumps slightly when hovered) */
-    .funny-gif:hover {
-        transform: scale(1.1);
-    }
+        .bounce-thrust {
+            animation: bounce 0.8s infinite alternate ease-in-out;
+        }
+
+        /* Spinning effect */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spin-thrust {
+            animation: spin 5s linear infinite;
+        }
+
+        /* Wiggling effect */
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+        }
+
+        .wiggle-thrust {
+            animation: wiggle 1s infinite ease-in-out;
+        }
+
+        /* Funny hover effect (jumps slightly when hovered) */
+        .funny-gif:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .thrust-logo {
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thrust-logo {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
     </style>
 </head>
 
@@ -165,14 +210,18 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <img src="./images/thrust-logo-400.gif"
-                alt="THRUST" class="thrust-logo mb-4" data-aos="zoom-in">
+            <img src="./images/thrust-logo-croped.gif" alt="THRUST" class="thrust-logo my-4" data-aos="zoom-in">
 
             <h1 class="fw-bold mb-3 gradient-text" data-aos="fade-up">
-                The THRUST Boys Meme Coin! 
-                <!-- <span class="badge bg-success animate__animated animate__pulse animate__infinite">Live!</span> -->
-                 <img src="./images/thrust2-425.gif" alt="Thrust Meme 3" 
-                      class="img-fluid rounded-3 shadow-lg funny-gif wiggle-thrust" style="width: 50px;">
+                <span>
+                    The THRUST Boys
+                </span>
+                <br>
+                <span>
+                    Meme Coin!
+                </span>
+                <img src="./images/thrust2-425.gif" alt="Thrust Meme 3"
+                    class="img-fluid rounded-3 shadow-lg funny-gif wiggle-thrust" style="width: 50px;">
             </h1>
 
             <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
@@ -194,21 +243,28 @@
         <div class="container text-center">
             <h2 class="gradient-text mb-5" data-aos="fade-up">🔥 THE THRUST MEME 🔥</h2>
             <div class="row g-4">
-                <!-- Bouncing GIF -->
-                <div class="col-md-6" data-aos="fade-up">
-                    <img src="./images/thrust22-425.gif" alt="Thrust Meme 1" 
-                         class="img-fluid rounded-3 shadow-lg funny-gif bounce-thrust">
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust2-425.gif" alt="Thrust Meme 1"
+                        class="img-fluid rounded-3 shadow-lg funny-gif wiggle-thrust">
                 </div>
-                <!-- Wiggling GIF -->
-                <div class="col-md-6" data-aos="fade-up">
-                    <img src="./images/thrust2-425.gif" alt="Thrust Meme 3" 
-                         class="img-fluid rounded-3 shadow-lg funny-gif wiggle-thrust">
+
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust22-425.gif" alt="Thrust Meme 1"
+                        class="img-fluid rounded-3 shadow-lg funny-gif bounce-thrust">
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./images/thrust2-425.gif" alt="Thrust Meme 3"
+                        class="img-fluid rounded-3 shadow-lg funny-gif wiggle-thrust">
                 </div>
             </div>
-            <p class="mt-4 lead" data-aos="fade-up">🚀 
-                thrust is a contagious virus , once it catches you  , you lose control and you start thrusting madly and unstoppably until you lock eyes with your target ..  you shoot the virus load towards him .. turning him into a thrust boy !
-                
-                thrust isn't just a hip motion it is a universal language that is understood and recognized by everyone ! 🚀</p>
+            <p class="mt-4 lead" data-aos="fade-up">🚀
+                thrust is a contagious virus , once it catches you , you lose control and you start thrusting madly and
+                unstoppably until you lock eyes with your target .. you shoot the virus load towards him .. turning him
+                into a thrust boy !
+
+                thrust isn't just a hip motion it is a universal language that is understood and recognized by everyone
+                ! 🚀</p>
         </div>
     </section>
 
@@ -275,8 +331,8 @@
         <div class="container text-center" data-aos="zoom-in">
             <h2 class="gradient-text mb-4">JOIN THE LAUNCH</h2>
             <div class="d-flex gap-3 justify-content-center mb-4" data-aos="fade-up">
-                <img src="./images/thrust1-425.gif" alt="Thrust Meme 1" 
-                     class="img-fluid rounded-3 shadow-lg funny-gif bounce-thrust" style="width: 160px; height: 200px;">
+                <img src="./images/thrust1-425.gif" alt="Thrust Meme 1"
+                    class="img-fluid rounded-3 shadow-lg funny-gif bounce-thrust" style="width: 160px; height: 200px;">
             </div>
             <div class="d-flex gap-3 justify-content-center">
                 <a href="https://t.me/yourchannel" target="_blank" class="btn btn-thrust"><i
